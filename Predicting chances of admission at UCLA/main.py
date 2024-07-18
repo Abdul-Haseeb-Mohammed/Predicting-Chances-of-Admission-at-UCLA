@@ -26,7 +26,7 @@ if __name__ == "__main__":
     As per our assumption, on average 28.4% of students would get admission to UCLA."""
     
     print("\n\nVisualize the dataset to see some patterns:")
-    scatter_plot(df,"Predicting chances of admission at UCLA/src/visualization/Scatter_Plot1.png")
+    scatter_plot(df,"Predicting chances of admission at UCLA/reports/Scatter_Plot1.png")
     
     cleaned_dataset = prepare_data(cleaned_dataset)
     
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     
     # Plotting loss curve
     loss_values = MLP.loss_curve_
-    loss_curve(loss_values,"Predicting chances of admission at UCLA/src/visualization/loss_curve.png")
+    loss_curve(loss_values,"Predicting chances of admission at UCLA/reports/loss_curve.png")
     
     print("Using Grid Search CV = 10 to find good parameters:")
     grid = gridSearchCV(MLP, x_scaled, cleaned_dataset['Admit_Chance'],10)
